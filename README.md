@@ -1,2 +1,2 @@
 # Test_task
-Telergamm - @DmitriiBaikov
+Telegram - @DmitriiBaikov
