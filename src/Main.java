@@ -11,9 +11,9 @@ public class Main {
         Player player = new Player(15, 10, 100, new int[]{1, 2, 3, 4, 5, 6});
 
 
-        Monster gargoyle = new Monster("Горгулья", 10, 5, 50, new int[]{1, 2, 3, 4}, true);
-        Monster chimera = new Monster("Химера", 12, 7, 60, new int[]{2, 3, 4, 5}, true);
-        Monster dragon = new Monster("Дракон", 15, 9, 70, new int[]{3, 4, 5, 6}, false);
+        Monster gargoyle = new Monster("Горгулья", 10, 5, 50, new int[]{1, 2, 3, 4, 5, 6}, true);
+        Monster chimera = new Monster("Химера", 12, 7, 60, new int[]{1, 2, 3, 4, 5, 6}, true);
+        Monster dragon = new Monster("Дракон", 15, 9, 70, new int[]{1, 2, 3, 4, 5, 6}, false);
 
         Monster attackingMonster = null;
 
@@ -104,7 +104,15 @@ public class Main {
             } else {
                 System.out.println("Атака провалилась!");
             }
-            System.out.println("Здоровье " + monsterName + ": " + monster.getHealth());
+
+
+            if (monsterName.equals("Горгулья")) {
+                System.out.println("Здоровье Горгульи: " + monster.getHealth());
+            } else if (monsterName.equals("Химера")) {
+                System.out.println("Здоровье Химеры: " + monster.getHealth());
+            } else {
+                System.out.println("Здоровье Дракона: " + monster.getHealth());
+            }
         } else {
             System.out.println(monster.getName() + " уже мертв" + (monster.isFemale() ? "а" : "") + "!");
         }
